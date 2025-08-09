@@ -42,8 +42,10 @@ Currently in **active development**, the system focuses on the MVP stage, implem
 
 After pulling or extracting the project directory, you will see two main folders:
 
+```bash
 FRONTEND/ # Root directory for the frontend server
 BACKEND/ # Contains backend server files and database file
+```
 
 
 ### 1. Frontend Setup
