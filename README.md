@@ -65,10 +65,12 @@ Open the `AAP-backend` folder in your code editor for backend development.
   - **Password:** *(your local MySQL password)*
 - Open the `.env` file inside the `AAP-backend` folder and update the database credentials accordingly:
 
+```bash
 DB_HOST=localhost
 DB_USER=root
 DB_PASSWORD=your_password
 DB_NAME=your_database_name
+```
 
 
 
@@ -89,10 +91,10 @@ Note: Ensure both the frontend and backend are running for the application to fu
 
 
 
-#### 📌 Status
+## 📌 Status
 Current Focus: Backend intelligence and core auto-apply functionality.
 
-##### Pending Improvements:
+### Pending Improvements:
 Customizable resume templates in the Resume Builder.
 Advanced parsing of uploaded CV files for richer matching.
 Additional job data sources.
@@ -100,6 +102,6 @@ UI enhancements for a smoother user experience.
 
 
 
-#### 📝 License
+## 📝 License
 This project is intended for educational and demonstration purposes.
 Future iterations may evolve into a deployable SaaS platform.
