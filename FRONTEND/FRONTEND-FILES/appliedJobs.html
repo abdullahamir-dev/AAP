@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Applied Jobs</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="appliedJobs.css">
+    <link rel="stylesheet" href="create-cv.css">
+    <link rel="stylesheet" href="newNav.css">
+</head>
+<body class="bg-gray-100 font-sans">
+    <header class="bg-blue-600 text-white shadow-md">
+              
+           
+        <nav class="navbar">
+            <div class="logo">
+                <a href="dashboard.html"><img src="images/Final_Logo.png" alt="AI Logo"></a>
+            </div>
+            <ul class="menu">
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="jobs.html">Jobs</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a id="logout-button" style="cursor: pointer;">LogOut</a></li>
+    
+            </ul>
+        </nav>
+      
+    </header>
+    
+    <main class="container mx-auto mt-6 px-6">
+        <h2 class="text-xl font-semibold mb-4">Applied Jobs</h2>
+        <section id="jobsContainer" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Job Cards will be dynamically inserted here -->
+        </section>
+    </main>
+
+    <!-- Job Details Modal -->
+    <div id="jobDetailsModal" class="hidden fixed inset-0 bg-gray-800 bg-opacity-50 flex items-center justify-center">
+        <div class="bg-white p-6 rounded-md shadow-lg max-w-lg w-full">
+            <button id="closeModal" class="text-gray-600 text-xl absolute top-4 right-4">&times;</button>
+            <h3 id="modalJobTitle" class="text-2xl font-semibold"></h3>
+            <p id="modalJobDescription" class="mt-4"></p>
+            <p id="modalJobDetails" class="mt-4"></p>
+            <p id="modalCompany" class="mt-4 font-semibold"></p>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>© 2025 Job Seekers Platform. All rights reserved.</p>
+    </footer>
+
+    <script src="appliedJobs.js"></script>
+</body>
+</html>

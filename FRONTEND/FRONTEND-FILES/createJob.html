@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Job | AutoApplyPro</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="createJob.css">
+    <link rel="stylesheet" href="newNav.css">
+</head>
+
+<body>
+    <header class="bg-blue-600 text-white shadow">
+        
+        <div class="container mx-auto flex justify-between items-center py-4 px-6">
+            <h1 class="text-2xl font-bold">AutoApplyPro</h1>
+            <nav class="flex items-center space-x-6">
+                <a href="employerDashboard.html" class="text-white hover:underline">Dashboard</a>
+                <button id="logoutBtn" class="bg-red-500 hover:bg-red-600 px-4 py-2 rounded-md">Logout</button>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container mx-auto mt-6 px-6">
+        <h2 class="text-2xl font-bold mb-4">Create a New Job</h2>
+        <form id="createJobForm" class="space-y-4 bg-white p-6 rounded-md shadow-md">
+            <!-- Job Title -->
+            <div>
+                <label class="block text-gray-700">Job Title</label>
+                <input type="text" id="job_title" class="w-full p-2 border rounded-md" placeholder="Enter job title" required>
+            </div>
+
+            <!-- Job Description -->
+            <div>
+                <label class="block text-gray-700">Job Description</label>
+                <textarea id="job_description" class="w-full p-2 border rounded-md" rows="4" placeholder="Enter job description" required></textarea>
+            </div>
+
+            <!-- Skills -->
+            <div>
+                <label class="block text-gray-700">Required Skills</label>
+                <textarea id="job_req_skills" class="w-full p-2 border rounded-md" rows="2" placeholder="Enter required skills (comma-separated)"></textarea>
+            </div>
+
+            <!-- Education -->
+            <div>
+                <label class="block text-gray-700">Required Education</label>
+                <input type="text" id="job_req_education" class="w-full p-2 border rounded-md" placeholder="Enter required education">
+            </div>
+
+            <!-- Job Type -->
+            <div>
+                <label class="block text-gray-700">Job Type</label>
+                <select id="job_type" class="w-full p-2 border rounded-md">
+                    <option value="Full-time">Full-time</option>
+                    <option value="Part-time">Part-time</option>
+                    <option value="Internship">Internship</option>
+                    <option value="Contract">Contract</option>
+                </select>
+            </div>
+
+            <!-- Salary -->
+            <div>
+                <label class="block text-gray-700">Salary Range</label>
+                <input type="text" id="salary_range" class="w-full p-2 border rounded-md" placeholder="Enter salary range (e.g., $40k-$60k)">
+            </div>
+
+            <!-- Location -->
+            <div class="grid grid-cols-3 gap-4">
+                <div>
+                    <label class="block text-gray-700">Country</label>
+                    <input type="text" id="location_country" class="w-full p-2 border rounded-md" placeholder="Country">
+                </div>
+                <div>
+                    <label class="block text-gray-700">City</label>
+                    <input type="text" id="location_city" class="w-full p-2 border rounded-md" placeholder="City">
+                </div>
+                <div>
+                    <label class="block text-gray-700">Town</label>
+                    <input type="text" id="location_town" class="w-full p-2 border rounded-md" placeholder="Town">
+                </div>
+            </div>
+
+            <button type="submit" class="w-full py-2 bg-blue-600 text-white rounded-md">Post Job</button>
+        </form>
+    </main>
+
+    <script src="createJob.js"></script>
+</body>
+
+</html>

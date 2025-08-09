@@ -1,0 +1,152 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>See Available Jobs</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        /* Animation for job cards */
+        .job-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            padding: 10px;
+        }
+        /* Animation for buttons */
+        .heart-btn:hover {
+            color: #ff4081;
+            transform: scale(1.2);
+            transition: transform 0.2s ease, color 0.2s ease;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 font-sans">
+    <header class="bg-blue-600 text-white shadow-sm">
+        <div class="container mx-auto flex items-center justify-between py-4 px-6">
+            <div class="flex items-center">
+                <img src="https://storage.googleapis.com/a1aa/image/SwfrDwuKkLURZywI0RgBO2UqzlZS7qTLcxze2CMIHLjdfv0nA.jpg" alt="Platform logo" class="h-10 w-10">
+                <input type="text" placeholder="Search for jobs, skills, or companies" class="ml-4 p-2 border rounded-md w-64 focus:outline-none focus:ring-2 focus:ring-blue-300">
+            </div>
+            <div class="flex items-center space-x-4">
+                <nav class="flex items-center space-x-4">
+                    <a href="Deshboard.html" class="text-white hover:text-gray-200 transition">Home</a>
+                    <a href="#" class="text-white hover:text-gray-200 transition">Jobs</a>
+                    <a href="dashboard-main.html" class="text-white hover:text-gray-200 transition">Create CV</a>
+                    <a href="#" class="text-white hover:text-gray-200 transition">Profile</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mx-auto mt-6 px-6">
+        <div class="bg-white p-6 rounded-md shadow-sm">
+            <h2 class="text-xl font-semibold mb-4">Available Jobs</h2>
+            
+            <!-- Job Filters -->
+            <div class="flex space-x-4 mb-6">
+                <select class="p-2 border rounded-md w-48">
+                    <option>All Categories</option>
+                    <option>Frontend</option>
+                    <option>Backend</option>
+                    <option>Data Science</option>
+                    <option>Product Management</option>
+                </select>
+                <select class="p-2 border rounded-md w-48">
+                    <option>All Locations</option>
+                    <option>Remote</option>
+                    <option>On-site</option>
+                    <option>Hybrid</option>
+                </select>
+                <button class="bg-blue-600 text-white p-2 rounded-md hover:bg-blue-500 transition">Filter</button>
+            </div>
+
+            <!-- Job Listings -->
+            <div class="space-y-4">
+                <div class="job-card border-b py-4 flex justify-between items-center hover:cursor-pointer">
+                    <div>
+                        <a class="text-blue-600 font-semibold hover:text-blue-800 transition" href="#">Frontend Developer</a>
+                        <p class="text-sm text-gray-600">Tech Company · Remote</p>
+                        <p class="text-sm text-gray-600">$60,000 - $80,000/year</p>
+                        <span class="text-xs text-gray-500">Posted 2 days ago</span>
+                    </div>
+                    <button class="heart-btn text-gray-400">
+                        <i class="fas fa-heart"></i>
+                    </button>
+                </div>
+
+                <div class="job-card border-b py-4 flex justify-between items-center">
+                    <div>
+                        <a class="text-blue-600 font-semibold hover:text-blue-800 transition" href="#">Backend Developer</a>
+                        <p class="text-sm text-gray-600">Software Inc. · On-site</p>
+                        <p class="text-sm text-gray-600">$70,000 - $90,000/year</p>
+                        <span class="text-xs text-gray-500">Posted 1 week ago</span>
+                    </div>
+                    <button class="heart-btn text-gray-400">
+                        <i class="fas fa-heart"></i>
+                    </button>
+                </div>
+
+                <div class="job-card border-b py-4 flex justify-between items-center">
+                    <div>
+                        <a class="text-blue-600 font-semibold hover:text-blue-800 transition" href="#">Data Scientist</a>
+                        <p class="text-sm text-gray-600">Analytics Corp · Remote</p>
+                        <p class="text-sm text-gray-600">$80,000 - $100,000/year</p>
+                        <span class="text-xs text-gray-500">Posted 3 days ago</span>
+                    </div>
+                    <button class="heart-btn text-gray-400">
+                        <i class="fas fa-heart"></i>
+                    </button>
+                </div>
+
+                <!-- Additional Job Listings -->
+                <div class="job-card border-b py-4 flex justify-between items-center">
+                    <div>
+                        <a class="text-blue-600 font-semibold hover:text-blue-800 transition" href="#">Full-stack Developer</a>
+                        <p class="text-sm text-gray-600">Tech Giant · Hybrid</p>
+                        <p class="text-sm text-gray-600">$85,000 - $110,000/year</p>
+                        <span class="text-xs text-gray-500">Posted 5 days ago</span>
+                    </div>
+                    <button class="heart-btn text-gray-400">
+                        <i class="fas fa-heart"></i>
+                    </button>
+                </div>
+                <div class="job-card border-b py-4 flex justify-between items-center">
+                    <div>
+                        <a class="text-blue-600 font-semibold hover:text-blue-800 transition" href="#">Product Manager</a>
+                        <p class="text-sm text-gray-600">Product Co. · On-site</p>
+                        <p class="text-sm text-gray-600">$90,000 - $120,000/year</p>
+                        <span class="text-xs text-gray-500">Posted 1 day ago</span>
+                    </div>
+                    <button class="heart-btn text-gray-400">
+                        <i class="fas fa-heart"></i>
+                    </button>
+                </div>
+            </div>
+
+            <div class="text-center py-4">
+                <a class="text-blue-600 hover:text-blue-800 transition" href="#">Show all</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="container mx-auto mt-8 px-6 text-gray-600 text-sm">
+        <div class="flex justify-between">
+            <div class="flex space-x-4">
+                <a href="#">About</a>
+                <a href="#">Accessibility</a>
+                <a href="#">Help Center</a>
+                <a href="#">Privacy &amp; Terms</a>
+                <a href="#">Ad Choices</a>
+                <a href="#">Advertising</a>
+                <a href="#">Business Services</a>
+                <a href="#">Get the App</a>
+                <a href="#">More</a>
+            </div>
+            <div>
+                <p>Job Seeking Platform © 2024</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

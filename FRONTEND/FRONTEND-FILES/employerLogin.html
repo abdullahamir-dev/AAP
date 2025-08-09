@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employer Login | AutoApplyPro</title>
+
+    <!-- Tailwind CSS for utility classes -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="employerLogin.css">
+   
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="logo">
+            <a href="dashboard.html"><img src="images/Final_Logo.png" alt="AI Logo"></a>
+        </div>
+       
+    </nav>
+    <!-- Employer Login Form -->
+    <div class="form-container">
+        <h2>Employer Login</h2>
+        <p>Access your account to create and manage jobs!</p>
+
+        <form id="employerLoginForm">
+            <!-- Email -->
+            <div class="input-group">
+                <i class="fas fa-envelope"></i>
+                <input type="email" id="email" placeholder="Work Email Address" required>
+            </div>
+
+            <!-- Password -->
+            <div class="input-group">
+                <i class="fas fa-lock"></i>
+                <input type="password" id="password" placeholder="Password" required>
+            </div>
+
+            <button type="submit" class="btn-submit">Login</button>
+        </form>
+
+        <div class="form-footer">
+            Don't have an account? <a href="employerSignup.html">Sign Up</a>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="employerLogin.js"></script>
+</body>
+
+</html>

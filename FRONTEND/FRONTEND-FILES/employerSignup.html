@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employer Sign Up | AutoApplyPro</title>
+
+    <!-- Tailwind CSS for utility classes -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="employerSignup.css">
+</head>
+
+<body>
+  
+       
+    </nav>
+    <!-- Employer Signup Form -->
+    <div class="form-container">
+        <h2>Employer Registration</h2>
+        <p>Join AutoApplyPro to create jobs and find the best talent!</p>
+
+        <form id="employerSignupForm">
+            <!-- First Name -->
+            <div class="input-group">
+                <i class="fas fa-user"></i>
+                <input type="text" id="first_name" placeholder="First Name" required>
+            </div>
+
+            <!-- Last Name -->
+            <div class="input-group">
+                <i class="fas fa-user"></i>
+                <input type="text" id="last_name" placeholder="Last Name" required>
+            </div>
+
+            <!-- Email -->
+            <div class="input-group">
+                <i class="fas fa-envelope"></i>
+                <input type="email" id="email" placeholder="Work Email Address" required>
+            </div>
+
+            <!-- Phone -->
+            <div class="input-group">
+                <i class="fas fa-phone"></i>
+                <input type="tel" id="phone" placeholder="Phone Number" required>
+            </div>
+
+            <!-- Company Name -->
+            <div class="input-group">
+                <i class="fas fa-building"></i>
+                <input type="text" id="company_name" placeholder="Company Name" required>
+            </div>
+
+            <!-- Password -->
+            <div class="input-group">
+                <i class="fas fa-lock"></i>
+                <input type="password" id="password" placeholder="Password" required>
+            </div>
+
+            <!-- Confirm Password -->
+            <div class="input-group">
+                <i class="fas fa-lock"></i>
+                <input type="password" id="confirm_password" placeholder="Confirm Password" required>
+            </div>
+
+            <button type="submit" class="btn-submit">Sign Up</button>
+        </form>
+
+        <div class="form-footer">
+            Already have an account? <a href="employerLogin.html">Log In</a>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="employerSignup.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Autoapplypro</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    
+
+    
+    
+
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="newNav.css">
+</head>
+<body>
+    <!-- Header -->
+    
+    <nav class="navbar">
+        <div class="logo">
+            <a href="dashboard.html"><img src="images/Final_Logo.png" alt="AI Logo"></a>
+        </div>
+        <ul class="menu">
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="jobs.html">Jobs</a></li>
+            <li><a href="profile.html">Profile</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a id="logout-button" style="cursor: pointer;">LogOut</a></li>
+
+        </ul>
+    </nav>
+     
+
+    <!-- Hero Section -->
+    <section >
+        <div>
+            <h2 >Revolutionize Your Job Search with Autoapplypro</h2>
+            <p>Let Autoapplypro automate your job applications and open doors to new opportunities effortlessly.</p>
+            <div>
+                <a href="#contact" id="get_started">Help Us</a>
+                <a href="AboutUs.html">Learn More</a>
+            </div>
+        </div>
+        <img>
+    </section>
+
+
+    
+    <!-- Features Section -->
+    <section class="features-section">
+        <h2>Our Key Features</h2>
+        <div class="features-container">
+            <div class="feature-card">
+                <i class="fas fa-chart-line"></i>
+                <h3><b>Track Your Applications</b></h3>
+                <p>Monitor your application status in real-time and stay ahead of the competition.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-file-alt"></i>
+                <h3><b>Auto-Generated Resumes</b></h3>
+                <p>Create and customize professional resumes with just a few clicks.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-bolt"></i>
+                <h3><b>Fast Job Applications</b></h3>
+                <p>Apply to multiple jobs at once and increase your chances of landing interviews.</p>
+            </div>
+        </div>
+    </section>
+    <!-- Contact Section -->
+    <section id="contact">
+        <div>
+            <h2 style="color:#102a42;"><b id="getIntouch">Get in Touch</b></h2>
+            <i class="fas fa-chart-line"></i>
+            <p>We'd love to hear from you. Have any questions or suggestions? Reach out to us!</p>
+        </div>
+        <div>
+            <form id="contact-form" action="#" method="POST" class="space-y-6">
+                <div>
+                    <div>
+                        <!-- <label for="name">Full Name</label> -->
+                        <input type="text" id="name" name="name" required placeholder="John Doe">
+                    </div>
+                    <div>
+                        <!-- <label for="email">Email Address</label> -->
+                        <input type="email" id="email" name="email" required placeholder="you@example.com">
+                    </div>
+                </div>
+                <div>
+                    <!-- <label for="message">Message</label> -->
+                    <textarea id="message" name="message" rows="5" required placeholder="Write your message here..."></textarea>
+                </div>
+                <button type="submit">Send Message</button>
+            </form>
+            <!-- <div id="response-message">Thank you for reaching out! We will respond to you shortly.</p> -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Autoapplypro. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript for Smooth Scroll and Form Handling -->
+    <script>
+        // Smooth Scroll for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Handle Contact Form Submission (Demo)
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent actual form submission
+
+            // Simulate successful form submission
+            const responseMessage = document.getElementById('response-message');
+            responseMessage.classList.remove('hidden');
+            responseMessage.classList.add('block');
+
+            // Optionally, clear the form after submission
+            document.getElementById('contact-form').reset();
+        });
+    </script>
+
+    
+
+  
+    <script src="logOut.js"></script>
+</body>
+</html>

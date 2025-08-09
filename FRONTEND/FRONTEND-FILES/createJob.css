@@ -1,0 +1,30 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+}
+
+header {
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+form {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+button {
+    transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: #005983;
+}
+
+input, textarea, select {
+    transition: border-color 0.3s ease-in-out;
+}
+
+input:focus, textarea:focus, select:focus {
+    border-color: #0073b1;
+    outline: none;
+}

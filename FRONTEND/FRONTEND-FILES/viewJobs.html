@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Posted Jobs | AutoApplyPro</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="viewJobs.css">
+</head>
+
+<body class="bg-gray-100 font-sans">
+    <!-- Header -->
+    <header class="bg-blue-600 text-white shadow">
+        <div class="container mx-auto flex justify-between items-center py-4 px-6">
+            <h1 class="text-2xl font-bold">AutoApplyPro</h1>
+            <nav class="flex items-center space-x-6">
+                <a href="employerDashboard.html" class="text-white hover:underline">Dashboard</a>
+                <button id="logoutBtn" class="bg-red-500 hover:bg-red-600 px-4 py-2 rounded-md">Logout</button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto mt-6 px-6">
+        <h2 class="text-2xl font-bold mb-4">Your Posted Jobs</h2>
+
+        <!-- Jobs Container -->
+        <div id="jobsContainer" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Job Cards will be dynamically inserted here -->
+        </div>
+
+        <!-- Message if no jobs are posted -->
+        <div id="noJobsMessage" class="hidden text-center text-gray-500 mt-6">
+            <i class="fas fa-exclamation-circle text-4xl"></i>
+            <p class="mt-2">No jobs posted yet. Create a new job to get started!</p>
+            <a href="createJob.html" class="mt-4 inline-block bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700">
+                Create Job
+            </a>
+        </div>
+    </main>
+    
+    
+    <!-- Link JavaScript -->
+    <script src="viewJobs.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Job | AutoApplyPro</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 font-sans">
+    <header class="bg-blue-600 text-white shadow">
+        <div class="container mx-auto flex items-center justify-between py-4 px-6">
+            <h1 class="text-xl font-bold">Edit Job</h1>
+            <nav class="space-x-4">
+                <a href="dashboard.html" class="text-white">Dashboard</a>
+                <a href="viewJobs.html" class="text-white">View Jobs</a>
+            </nav>
+        </div>
+    </header>
+    <main class="container mx-auto mt-6 px-6">
+        <div class="bg-white p-6 rounded shadow-md">
+            <h2 class="text-lg font-semibold mb-4">Update Job Details</h2>
+            <form id="editJobForm" class="space-y-4">
+                <input type="hidden" id="jobId"> <!-- Job ID will be set dynamically -->
+
+                <div>
+                    <label for="job_title" class="block text-gray-700">Job Title</label>
+                    <input type="text" id="job_title" class="w-full p-2 border rounded" placeholder="Enter job title" required>
+                </div>
+
+                <div>
+                    <label for="job_description" class="block text-gray-700">Job Description</label>
+                    <textarea id="job_description" class="w-full p-2 border rounded" rows="4" placeholder="Enter job description" required></textarea>
+                </div>
+
+                <div>
+                    <label for="job_req_skills" class="block text-gray-700">Required Skills</label>
+                    <textarea id="job_req_skills" class="w-full p-2 border rounded" rows="2" placeholder="Enter required skills (comma-separated)"></textarea>
+                </div>
+
+                <div>
+                    <label for="job_req_education" class="block text-gray-700">Required Education</label>
+                    <textarea id="job_req_education" class="w-full p-2 border rounded" rows="2" placeholder="Enter required education"></textarea>
+                </div>
+
+                <div>
+                    <label for="job_type" class="block text-gray-700">Job Type</label>
+                    <select id="job_type" class="w-full p-2 border rounded">
+                        <option value="Full-time">Full-time</option>
+                        <option value="Part-time">Part-time</option>
+                        <option value="Internship">Internship</option>
+                        <option value="Contract">Contract</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="salary_range" class="block text-gray-700">Salary Range</label>
+                    <input type="text" id="salary_range" class="w-full p-2 border rounded" placeholder="Enter salary range">
+                </div>
+
+                <div>
+                    <label for="location_country" class="block text-gray-700">Country</label>
+                    <input type="text" id="location_country" class="w-full p-2 border rounded" placeholder="Enter country">
+                </div>
+
+                <div>
+                    <label for="location_city" class="block text-gray-700">City</label>
+                    <input type="text" id="location_city" class="w-full p-2 border rounded" placeholder="Enter city">
+                </div>
+
+                <div>
+                    <label for="location_town" class="block text-gray-700">Town</label>
+                    <input type="text" id="location_town" class="w-full p-2 border rounded" placeholder="Enter town">
+                </div>
+
+                <button type="submit" class="w-full py-2 bg-blue-600 text-white rounded">Update Job</button>
+            </form>
+        </div>
+    </main>
+</body>
+<script src="editJob.js"></script>
+</html>

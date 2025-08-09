@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jobs Listing</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="jobs.css">
+    
+    <link rel="stylesheet" href="newNav.css">
+</head>
+<body class="bg-gray-100 font-sans">
+    <header class="bg-blue-600 text-white shadow-md">
+       
+        <nav class="navbar">
+            <div class="logo">
+                <a href="dashboard.html"><img src="images/Final_Logo.png" alt="AI Logo"></a>
+            </div>
+            <ul class="menu">
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="jobs.html">Jobs</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a id="logout-button" style="cursor: pointer;">Logout</a></li>
+    
+            </ul>
+        </nav>
+    </header>
+    
+    <main class="container mx-auto mt-6 px-6">
+        <!-- Filters Section -->
+        <section class="filters mb-6 p-4 bg-white shadow-sm rounded-md txt">
+            <h2 class="filterBtn">Filter Jobs</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <input type="text" id="filterSkills" placeholder="Filter by Skills" class="p-2 border rounded-md">
+                <input type="text" id="filterEducation" placeholder="Filter by Education" class="p-2 border rounded-md">
+                <input type="text" id="filterLocation" placeholder="Filter by Location (City/Town)" class="p-2 border rounded-md">
+            </div>
+            <button id="applyFilters" class="mt-4 px-4 py-2 text-white rounded-md applyBtn">Apply Filters</button>
+        </section>
+
+        <!-- Jobs Listing Section -->
+        <section id="jobsContainer" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Job Cards will be dynamically inserted here -->
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>© 2025 Job Seekers Platform. All rights reserved.</p>
+    </footer>
+
+    <script src="jobs.js"></script>
+    <script src="logOut.js"></script>
+    <script src="cvUploadedChecker.js"></script>
+</body>
+</html>

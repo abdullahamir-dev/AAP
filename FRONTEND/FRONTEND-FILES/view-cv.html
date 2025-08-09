@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your CV Details</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="create-cv.css">
+    <link rel="stylesheet" href="newNav.css">
+    <style>
+        #download-btn{
+            margin-left: 20PX;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 font-sans">
+    <header class="bg-blue-600 text-white shadow-sm">
+      
+        <nav class="navbar">
+            <div class="logo">
+                <a href="dashboard.html"><img src="images/Final_Logo.png" alt="AI Logo"></a>
+            </div>
+            <ul class="menu">
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="jobs.html">Jobs</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a id="logout-button" style="cursor: pointer;">LogOut</a></li>
+    
+            </ul>
+        </nav>
+           
+    </header>
+    <main class="container mx-auto mt-6 px-6">
+        <div class="bg-white p-6 rounded-md shadow-sm">
+            <h2 class="text-xl font-semibold mb-4">Your CV Details</h2>
+            <div id="cv-details" class="space-y-4">
+                <!-- Details will be dynamically filled here by JS -->
+                <div>
+                    <strong>Full Name:</strong> <br><span id="full_name">Loading...</span>
+                </div>
+                <div>
+                    <strong>Email:</strong> <br><span id="email">Loading...</span>
+                </div>
+                <div>
+                    <strong>Phone:</strong><br> <span id="phone">Loading...</span>
+                </div>
+                <div>
+                    <strong>Country:</strong> <br><span id="country">Loading...</span>
+                </div>
+                <div>
+                    <strong>City:</strong> <br><span id="city">Loading...</span>
+                </div>
+                <div>
+                    <strong>Town/Area:</strong> <br><span id="townOrArea">Loading...</span>
+                </div>
+                <div>
+                    <strong>Skills:</strong><br> <span id="skills">Loading...</span>
+                </div>
+                <div>
+                    <strong>Experience:</strong>
+                    <p id="experience">Loading...</p>
+                </div>
+                <div>
+                    <strong>Education:</strong>
+                    <p id="education">Loading...</p>
+                </div>
+                <div>
+                    <strong>Field of Study:</strong> <br><span id="field_of_study">Loading...</span>
+                </div>
+                <div>
+                    <strong>CV Document:</strong>
+                    <button id="download-btn" class="py-2 px-4 bg-blue-600 text-white rounded-md">
+                        <i class="fas fa-download"></i> Download CV
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <p>&copy; 2025 Autoapplypro. All Rights Reserved.</p>
+    </footer>
+
+    <script src="view-cv.js"></script>
+    <script src="logOut.js"></script>
+</body>
+</html>

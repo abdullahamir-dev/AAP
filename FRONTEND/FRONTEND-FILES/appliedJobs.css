@@ -1,0 +1,78 @@
+body {
+    background-color: #f8f9fa;
+    font-family: 'Arial', sans-serif;
+}
+
+.job-card {
+    background-color: #3f5467;
+    border: 1px solid #e0e0e0;
+    padding: 20px;
+    border-radius: 8px;
+    transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.job-card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transform: translateY(-5px);
+}
+
+.job-card h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.job-card p {
+    font-size: 14px;
+    color: #ffffff;
+    margin-bottom: 5px;
+}
+
+.view-details-btn {
+    background-color: #102a42;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.view-details-btn:hover {
+    background-color: #003c7d;
+}
+
+#jobDetailsModal {
+    z-index: 1000;
+}
+
+#jobDetailsModal .bg-white {
+    position: relative;
+    max-height: 90%;
+    overflow-y: auto;
+}
+
+#closeModal {
+    cursor: pointer;
+}
+
+
+
+html, body {
+    height: 100%; /* Ensures the page takes up the full height of the viewport */
+    margin: 0; /* Removes any default margin */
+    display: flex;
+    flex-direction: column; /* Makes the body a flex container */
+}
+
+.footer {
+    background-color: #0056b3;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    float: bottom;
+}
+
+
+
+

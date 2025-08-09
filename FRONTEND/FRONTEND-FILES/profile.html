@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang=.profile-header-h1en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autoapplypro - Profile</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .cover-photo{
+            width : "1000px" ; 
+            height:"200px" ;   
+            opacity: 80%;
+        }
+
+        .cover-photo:hover{
+            opacity: 100%;
+        }
+
+        .footer {
+    background-color: #0056b3;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+               }
+
+
+        body {
+            background-color: #eef1f6;
+        }
+        .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #007bff; /* Blue color */
+    padding: 15px 30px;
+    border-bottom: 1px solid #d3d3d3;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.navbar:hover {
+    background-color: #0056b3;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.navbar .logo {
+    display: flex;
+    align-items: center;
+    font-size: 26px;
+    font-weight: bold;
+    color: #ffffff; /* White text for contrast */
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.navbar .logo:hover {
+    transform: scale(1.1);
+}
+
+.navbar .logo img {
+    width: 40px;
+    margin-right: 10px;
+}
+
+.navbar .menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin-left: auto;
+    gap: 30px;
+}
+
+.navbar .menu li a {
+    text-decoration: none;
+    color: #ffffff; /* White text for menu items */
+    font-size: 18px;
+    font-weight: 500;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+}
+
+.navbar .menu li a:hover {
+    background-color: #003c7d;
+    color: #ffffff;
+    transform: translateY(-3px);
+}
+
+.navbar .menu li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 0;
+    background-color: white;
+    transition: width 0.3s ease-in-out;
+}
+
+.navbar .menu li a:hover::after {
+    width: 100%;
+}
+
+.buttons-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.navbar .icons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.navbar .icons i {
+    font-size: 22px;
+    color: #ffffff; /* White icons */
+    cursor: pointer;
+    transition: color 0.3s ease-in-out, transform 0.3s;
+}
+
+.navbar .icons i:hover {
+    color: #ffeb3b; /* Bright yellow */
+    transform: scale(1.2);
+}
+
+.notification {
+    position: relative;
+}
+
+.notification span {
+    position: absolute;
+    top: -6px;
+    right: -10px;
+    background: red;
+    color: white;
+    font-size: 12px;
+    border-radius: 50%;
+    padding: 4px 7px;
+    font-weight: bold;
+}
+
+.profile-pic img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid #0056b3;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out, border-color 0.3s ease-in-out;
+}
+
+.profile-pic img:hover {
+    transform: scale(1.1);
+    border-color: #ffeb3b; /* Bright yellow border on hover */
+}
+
+.navbar .cta-btn {
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    transition: background-color 0.3s ease-in-out, transform 0.3s;
+}
+
+.navbar .cta-btn:hover {
+    background-color: #003c7d;
+    transform: scale(1.1);
+}
+
+/* Dashboard Styles */
+.dashboard {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 40px;
+    max-width: 1200px;
+    margin: 40px auto;
+    background: url('https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0?fit=crop&w=1600&q=80') no-repeat center center;
+    background-size: cover;
+    border-radius: 10px;
+    animation: fade-in 1s ease-in-out;
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+        .profile-header {
+            text-align: center;
+            padding: 50px 0;
+            background-color: #003c7d; /* Blue color */
+            color: white;
+            position: relative;
+        }
+        .profile-header img.cover-photo {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .profile-header img.profile-picture {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 5px solid white;
+            position: absolute;
+            bottom: -80px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .profile-header h1 {
+            margin-top: 20px;
+            font-size: 32px;
+        }
+        .profile-header p {
+            font-size: 18px;
+            color: #d1e7ff;
+            margin-bottom: 40px;
+        }
+        .profile-content {
+            max-width: 1000px;
+            margin: 30px auto;
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+        }
+        .profile-buttons {
+            display: flex;
+            justify-content: flex-end;
+            margin-bottom: 20px;
+        }
+        .profile-buttons button {
+            background-color: #102a42;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-size: 16px;
+            margin-left: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+        }
+        .profile-buttons button:hover {
+            background-color: #003c7d;
+            transform: scale(1.05);
+        }
+        .profile-section {
+            margin-bottom: 20px;
+        }
+        .profile-section h2 {
+            font-size: 24px;
+            color: #102a42;
+            margin-bottom: 15px;
+        }
+        .profile-section p {
+            font-size: 16px;
+            color: #444;
+            line-height: 1.6;
+        }
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .skills-list .skill {
+            background-color: #0056b3;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-size: 14px;
+            margin: 5px;
+        }
+    </style>
+    <link rel="stylesheet" href="newNav.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <a href="dashboard.html"><img src="images/Final_Logo.png" alt="AI Logo"></a>
+        </div>
+        <ul class="menu">
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="jobs.html">Jobs</a></li>
+            <li><a href="profile.html">Profile</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a id="logout-button" style="cursor: pointer;">LogOut</a></li>
+
+        </ul>
+    </nav>
+    
+    <header class="profile-header">
+        <img src="images/image.png"   class="cover-photo" alt="Cover Photo">
+        <h1 class="profile-name">John Doe</h1>
+        <img src="images/userIcon.png" class="profile-picture" alt="Profile Picture">
+        <p class="profile-profession">Software Engineer | AI Enthusiast | Open to Work</p>
+        
+    </header>
+
+    <section class="profile-content">
+        <div class="profile-buttons">
+            <button id="edit.profile-btn">Edit Profile</button>
+        </div>
+
+        <div class="profile-section">
+            <h2 >About Me</h2>
+            <p class="profile-bio">Experienced Software Engineer with a passion for AI-driven solutions. Skilled in full-stack development, problem-solving, and innovation.</p>
+        </div>
+
+        <div class="profile-section">
+            <h2>Skills</h2>
+            <p class="profile-skills">Software Engineer at TechCorp (2021 - Present)</p>
+            
+        </div>
+
+        <div class="profile-section">
+            <h2>Education</h2>
+            <p class="profile-education">Bachelor of Science in Computer Science, University of Tech (2014 - 2018)</p>
+        </div>
+
+        <div class="profile-section">
+            <h2>Experience</h2>
+            <p class="profile-experience">Bachelor of Science in Computer Science, University of Tech (2014 - 2018)</p>
+        </div>
+        
+        <!-- <div class="profile-section">
+            <h2>Skills & Endorsements</h2>
+            <div class="skills-list">
+                <span class="skill">JavaScript</span>
+                <span class="skill">Python</span>
+                <span class="skill">React</span>
+                <span class="skill">Node.js</span>
+                <span class="skill">Machine Learning</span>
+                <span class="skill">Problem Solving</span>
+            </div>
+        </div> -->
+    </section>
+    <br>
+    <br>
+    <footer class="footer">
+        <p>&copy; 2025 Autoapplypro. All Rights Reserved.</p>
+    </footer>
+
+    <script src="profile.js"></script>
+    <script src="logOut.js"></script>
+</body>
+</html>

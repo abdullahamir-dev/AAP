@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Autoapplypro</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="flex justify-between items-center p-6 bg-gradient-to-r from-blue-500 to-blue-600 text-white shadow-lg rounded-lg">
+        <div class="font-bold text-xl">
+            <span></span>
+        </div>
+        <nav class="space-x-6">
+            <a href="home.html" class="hover:text-gray-300 transition duration-200">Home</a>
+            <a href="Deshboard.html" class="hover:text-gray-300 transition duration-200">Dashboard</a>
+            <a href="dashboard.html" class="hover:text-gray-300 transition duration-200">Jobs</a>
+            <a href="profile.html" class="hover:text-gray-300 transition duration-200">Profile</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-r from-blue-400 to-blue-500 text-white py-12 px-8 rounded-lg shadow-xl">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-3xl font-semibold mb-4">Transform Your Job Search with Autoapplypro</h2>
+            <p class="text-lg mb-6">Streamline your job applications and unlock a world of opportunities with Autoapplypro – the easiest way to automate your job search and apply to the best positions in just a few clicks.</p>
+            <div class="space-x-4">
+                <a href="#get-started" class="bg-white text-blue-600 hover:bg-blue-600 hover:text-white transition duration-300 py-2 px-6 rounded-full text-lg font-medium">Get Started</a>
+                <a href="#learn-more" class="bg-transparent border-2 border-white text-white hover:bg-white hover:text-blue-600 transition duration-300 py-2 px-6 rounded-full text-lg font-medium">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-12 px-6 bg-white">
+        <div class="max-w-6xl mx-auto text-center">
+            <h3 class="text-2xl font-semibold mb-6">Why Choose Autoapplypro?</h3>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-gray-100 p-6 rounded-lg shadow-md">
+                    <h4 class="text-xl font-bold mb-2">Efficiency</h4>
+                    <p>Save time with automated applications that match your skills and preferences.</p>
+                </div>
+                <div class="bg-gray-100 p-6 rounded-lg shadow-md">
+                    <h4 class="text-xl font-bold mb-2">Simplicity</h4>
+                    <p>Apply to multiple jobs with a single click, no complicated forms or steps.</p>
+                </div>
+                <div class="bg-gray-100 p-6 rounded-lg shadow-md">
+                    <h4 class="text-xl font-bold mb-2">Results</h4>
+                    <p>Track and optimize your job search with powerful analytics and insights.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gradient-to-r from-blue-500 to-blue-600 text-white py-6 text-center">
+        <p>&copy; 2024 Autoapplypro. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript for smooth scroll effect -->
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autoapplypro - About Us</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f3f4f6;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #102a42;
+            padding: 15px 30px;
+            border-bottom: 1px solid #d3d3d3;
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+
+        .navbar:hover {
+            background-color: #102a42;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .navbar .logo {
+            display: flex;
+            align-items: center;
+            font-size: 26px;
+            font-weight: bold;
+            color: #ffffff;
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .navbar .logo img {
+            width: auto;
+            height: 50px;
+        }
+
+        .hero-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 60vh;
+            background: url('images/office_pic2.jpg') no-repeat center center;
+            background-size: cover;
+            color: #fff;
+            text-align: center;
+        }
+
+        .hero-section .content {
+            max-width: 800px;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .hero-section h1 {
+            font-size: 50px;
+            margin-bottom: 20px;
+        }
+
+        .hero-section p {
+            font-size: 20px;
+            margin-bottom: 30px;
+        }
+
+        .about-container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 50px;
+            background-color: #ffffff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+
+        .about-container h2 {
+            font-size: 36px;
+            color: #102a42;
+            margin-bottom: 20px;
+        }
+
+        .about-container p {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .about-container .features {
+            margin-top: 30px;
+        }
+
+        .about-container .features ul {
+            padding-left: 25px;
+        }
+
+        .about-container .features h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+            color: #0056b3;
+        }
+
+        .footer {
+            background-color: #273F54;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <a href="home.html"><img src="images/Final_Logo.png" alt="AI Logo"></a>
+        </div>
+    </nav>
+
+    <section class="hero-section">
+        <div class="content">
+            <h1>About Autoapplypro</h1>
+            <p>Your trusted platform for simplifying job applications and career management.</p>
+        </div>
+    </section>
+
+    <div class="about-container">
+        <h2>Who We Are</h2>
+        <p>Autoapplypro is a cutting-edge platform designed to help job seekers streamline their job application process. We aim to bridge the gap between talented individuals and their dream careers by leveraging automation and advanced technology.</p>
+
+        <p>With features like real-time application tracking, auto-generated resumes, and fast job applications, Autoapplypro ensures you spend less time worrying about the process and more time focusing on your goals.</p>
+
+        <h2>Our Vision</h2>
+        <p>To revolutionize the job application process and empower individuals to achieve their career aspirations effortlessly.</p>
+
+        <h2>Our Mission</h2>
+        <p>We are committed to providing a seamless, user-friendly platform that automates and enhances the job-seeking experience, making it accessible to everyone.</p>
+
+        <div class="features">
+            <h2>Key Features</h2>
+            <ul>
+                <li>Track Your Applications: Monitor the status of your applications in real-time and stay updated.</li>
+                <li>Auto-Generated Resumes: Create professional resumes effortlessly.</li>
+                <li>Fast Job Applications: Apply to multiple opportunities at once with ease.</li>
+            </ul>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2025 Autoapplypro. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

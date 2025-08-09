@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autoapplypro - Home</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f3f4f6;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        .navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #102a42; /* Blue color */
+    padding: 15px 30px;
+    border-bottom: 1px solid #d3d3d3;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+     
+}
+
+
+
+.navbar:hover {
+    background-color: #102a42;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.navbar .logo {
+    display: flex;
+    align-items: center;
+    font-size: 26px;
+    font-weight: bold;
+    color: #ffffff; /* White text for contrast */
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+    justify-content: center;
+
+}
+
+.navbar .logo:hover {
+    transform: scale(1.1);
+}
+
+.navbar .logo img {
+    width: auto;
+    height: 50px;
+    justify-content: center;
+}
+
+.navbar .menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin-left: auto;
+    gap: 30px;
+}
+
+.navbar .menu li a {
+    text-decoration: none;
+    color: #ffffff; /* White text for menu items */
+    font-size: 18px;
+    font-weight: 500;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+}
+
+.navbar .menu li a:hover {
+    background-color: #003c7d;
+    color: #ffffff;
+    transform: translateY(-3px);
+}
+
+.navbar .menu li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 0;
+    background-color: white;
+    transition: width 0.3s ease-in-out;
+}
+
+.navbar .menu li a:hover::after {
+    width: 100%;
+}
+
+.buttons-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.navbar .icons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.navbar .icons i {
+    font-size: 22px;
+    color: #ffffff; /* White icons */
+    cursor: pointer;
+    transition: color 0.3s ease-in-out, transform 0.3s;
+}
+
+.navbar .icons i:hover {
+    color: #ffeb3b; /* Bright yellow */
+    transform: scale(1.2);
+}
+
+.notification {
+    position: relative;
+}
+
+.notification span {
+    position: absolute;
+    top: -6px;
+    right: -10px;
+    background: red;
+    color: white;
+    font-size: 12px;
+    border-radius: 50%;
+    padding: 4px 7px;
+    font-weight: bold;
+}
+
+.profile-pic img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid #0056b3;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out, border-color 0.3s ease-in-out;
+}
+
+.profile-pic img:hover {
+    transform: scale(1.1);
+    border-color: #ffeb3b; /* Bright yellow border on hover */
+}
+
+.navbar .cta-btn {
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    transition: background-color 0.3s ease-in-out, transform 0.3s;
+}
+
+.navbar .cta-btn:hover {
+    background-color: #003c7d;
+    transform: scale(1.1);
+}
+
+/* Dashboard Styles */
+.dashboard {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 40px;
+    max-width: 1200px;
+    margin: 40px auto;
+    background: url('images/office_pic1.jpg') no-repeat center center;
+    background-size: cover;
+    border-radius: 10px;
+    animation: fade-in 1s ease-in-out;
+    opacity:30%;
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+        .hero-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: url('images/office_pic2.jpg') no-repeat center center;
+            background-size: cover;
+            color: #fff;
+            text-align: center;
+            
+        }
+
+        .hero-section .content {
+            max-width: 600px;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .hero-section h1 {
+            font-size: 50px;
+            margin-bottom: 20px;
+        }
+
+        .hero-section p {
+            font-size: 20px;
+            margin-bottom: 30px;
+        }
+
+        .hero-section .cta-buttons a {
+            display: inline-block;
+            text-decoration: none;
+            color: #fff;
+            background-color: #003c7d;
+            padding: 15px 30px;
+            border-radius: 30px;
+            font-size: 18px;
+            font-weight: bold;
+            margin-right: 15px;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .hero-section .cta-buttons a:hover {
+            background-color: #102a42;
+            transform: translateY(-5px);
+        }
+
+        .features-section {
+    padding: 50px 20px;
+    background-color: #f3f4f6;
+    text-align: center;
+}
+
+.features-section h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #102a42;
+}
+
+.features-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.feature-card {
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    background-color: #102a42; /* Hover background color */
+    color: #ffffff; /* Hover text color */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.feature-card i {
+    font-size: 50px;
+    color: #0056b3;
+    margin-bottom: 15px;
+    transition: color 0.3s ease;
+}
+
+.feature-card:hover i {
+    color: #ffeb3b; /* Icon hover color */
+}
+
+.feature-card h3 {
+    font-size: 22px;
+    margin-bottom: 15px;
+    transition: color 0.3s ease;
+}
+
+.feature-card:hover h3 {
+    color: #ffffff; /* Heading hover color */
+}
+
+        .footer {
+            background-color: #273F54;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <a href="home.html"><img src="images/Final_Logo.png" alt="AI Logo"></a>
+            <!-- <a href="home.html" style="text-decoration: none; color: white;" >
+            Autoapplypro  
+            </a> -->
+        </div>
+        
+    </nav>
+    
+    <section class="hero-section">
+        <div class="content">
+            <h1>Find Your Dream Job Instantly</h1>
+            <p>Autoapplypro makes it easy to create and submit job applications automatically. Start your career journey with us!</p>
+            <div class="cta-buttons">
+                <a href="signUp.html">Get Started</a>
+                <a href="AboutUs.html">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="features-section">
+        <h2>Our Key Features</h2>
+        <div class="features-container">
+            <div class="feature-card">
+                <i class="fas fa-chart-line"></i>
+                <h3>Track Your Applications</h3>
+                <p>Monitor your application status in real-time and stay ahead of the competition.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-file-alt"></i>
+                <h3>Auto-Generated Resumes</h3>
+                <p>Create and customize professional resumes with just a few clicks.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-bolt"></i>
+                <h3>Fast Job Applications</h3>
+                <p>Apply to multiple jobs at once and increase your chances of landing interviews.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2025 Autoapplypro. All Rights Reserved.</p>
+    </footer>
+    <script src="logOut.js"></script>
+</body>
+</html>
+
+
+

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employer Dashboard | AutoApplyPro</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="employerDashboard.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <header class="bg-blue-600 text-white shadow">
+        <div class="container mx-auto flex justify-between items-center py-4 px-6">
+            <h1 class="text-2xl font-bold">AutoApplyPro</h1>
+            <nav class="flex items-center space-x-6">
+                <a href="employerDashboard.html" class="text-white hover:underline">Dashboard</a>
+                <a href="createJob.html" class="text-white hover:underline">Create Job</a>
+                <a href="employerProfile.html" class="text-white hover:underline">Profile</a>
+                <button id="logoutBtn" class="bg-red-500 hover:bg-red-600 px-4 py-2 rounded-md">Logout</button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto mt-6 px-6">
+        <h3 class="text-2xl font-bold mb-4" style="color: rgb(37 99 235 / var(--tw-text-opacity, 1));;" ><u>Welcome, Dear Employer!</u></h3>
+        <h5 class="text-2xl font-light mb-4" id="welcome-clause-name"  style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 20px; line-height: 20%; color: rgb(37 99 235 / var(--tw-text-opacity, 1));;" ></h5>
+        <h5 class="text-2xl font-light mb-4" id="welcome-clause-email" style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 20px; line-height: 20%; color: rgb(37 99 235 / var(--tw-text-opacity, 1));;" ></h5><br>
+
+        
+         
+
+        <div class="grid grid-cols-3 gap-6">
+            <!-- Create Job -->
+            <div class="card">
+                <i class="fas fa-plus-circle text-4xl text-blue-600"></i>
+                <h3 class="text-xl font-bold mt-2">Create Job</h3>
+                <p>Create a new job listing and attract top talent.</p>
+                <a href="createJob.html" class="text-blue-600 hover:underline">Go to Create Job</a>
+            </div>
+
+            <!-- View Posted Jobs -->
+            <div class="card">
+                <i class="fas fa-briefcase text-4xl text-blue-600"></i>
+                <h3 class="text-xl font-bold mt-2">View Posted Jobs</h3>
+                <p>See all the jobs you have posted and their applications.</p>
+                <a href="viewJobs.html" class="text-blue-600 hover:underline">View Jobs</a>
+            </div>
+
+            <!-- Profile -->
+            <div class="card">
+                <i class="fas fa-user text-4xl text-blue-600"></i>
+                <h3 class="text-xl font-bold mt-2">Profile</h3>
+                <p>Manage your profile and update company information.</p>
+                <a href="employerProfile.html" class="text-blue-600 hover:underline">Manage Profile</a>
+            </div>
+        </div>
+    </main>
+
+    <script src="employerDashboard.js"></script>
+</body>
+</html>
+

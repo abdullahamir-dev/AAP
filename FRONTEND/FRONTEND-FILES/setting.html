@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Settings Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #95a3b2, #abbacc);
+        }
+        .hero-section {
+            background: linear-gradient(359deg, #102a42, #003c7d);
+            height: 80vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #ffffff;
+            text-align: center;
+            flex-direction: column;
+            border-bottom: 8px solid #00A86B;
+        }
+        .hero-section h1 {
+            font-size: 4rem;
+            font-weight: 700;
+            text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+        }
+        .hero-section p {
+            font-size: 1.5rem;
+            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+        }
+        .btn {
+            padding: 12px 30px;
+            background-color: #102a42;
+            color: white;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 20px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+        .btn:hover {
+            background-color: #003c7d;
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+        }
+        .card {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            transition: all 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #000000;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            font-size: 1rem;
+        }
+        .contact-form button {
+            background-color: #007BFF;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 10px;
+            font-size: 1rem;
+            cursor: pointer;
+            width: 100%;
+            transition: all 0.3s ease;
+        }
+        .contact-form button:hover {
+            background-color: #0056b3;
+        }
+        .footer {
+    background-color: #273F54;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    position: fixed; /* Make the footer fixed */
+    bottom: 0; /* Position it at the bottom */
+    width: 100%; /* Full width */
+}
+    </style>
+    <link rel="stylesheet" href="newNav.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <a href="dashboard.html"><img src="images/Final_Logo.png" alt="AI Logo"></a>
+        </div>
+        <ul class="menu">
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="jobs.html">Jobs</a></li>
+            <li><a href="profile.html">Profile</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a id="logout-button" style="cursor: pointer;">LogOut</a></li>
+
+        </ul>
+    </nav>
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <h1>Manage Your Settings</h1>
+        <p>Adjust your preferences and account settings below to personalize your experience.</p>
+        <a href="#settings" class="btn">Start Customizing</a>
+    </section>
+
+    <!-- Account Settings Section -->
+    <section id="settings" class="py-20 px-6 text-center">
+        <h2 class="text-4xl font-semibold mb-8 text-gray-800">Account Settings</h2>
+        <div class="grid md:grid-cols-2 gap-12">
+            <div class="card">
+                <h3 class="text-xl font-semibold mt-4">Change Password</h3>
+                <p>Keep your account secure by updating your password regularly.</p>
+                <button class="btn mt-4">Change Password</button>
+            </div>
+            <div class="card">
+                <h3 class="text-xl font-semibold mt-4">Update Email</h3>
+                <p>Modify your email address to ensure you receive important updates.</p>
+                <button class="btn mt-4">Update Email</button>
+            </div>
+        </div>
+        <br>
+        <h2 class="text-4xl font-semibold mb-8 text-gray-800">Preferences</h2>
+        <div class="grid md:grid-cols-2 gap-12">
+            <div class="card">
+                <h3 class="text-xl font-semibold mt-4">Enable Auto Apply</h3>
+                <p>Get Hired Faster with AutoApplyPro!</p>
+                <button class="btn mt-4" id="auto-apply-btn" >Enable Auto Apply</button>
+            </div>
+            <div class="card">
+                <h3 class="text-xl font-semibold mt-4">Language Preferences</h3>
+                <p>Choose your preferred language for the platform's interface.</p>
+                <button class="btn mt-4">Select Language</button>
+            </div>
+            <div class="card">
+                <h3 class="text-xl font-semibold mt-4">Theme Settings</h3>
+                <p>Switch between dark and light themes for better comfort.</p>
+                <button class="btn mt-4">Change Theme</button>
+            </div>
+        </div>
+    </section>
+
+    
+
+    <footer class="footer">
+        <p>&copy; 2025 Autoapplypro. All rights reserved.</p>
+    </footer>
+
+    <script src="settings.js"></script>
+    <script src="cvUploadedChecker.js"></script>
+</body>
+</html>

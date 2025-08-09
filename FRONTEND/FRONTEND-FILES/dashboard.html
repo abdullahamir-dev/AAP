@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autoapplypro - Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css">
+    <!-- <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script> -->
+    <!-- <link rel="stylesheet" href="dashboard-advtAlert.css"> -->
+     <link rel="stylesheet" href="newNav.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <a href="dashboard.html"><img src="images/Final_Logo.png" alt="AI Logo"></a>
+        </div>
+        <ul class="menu">
+            <li><a href="dashboard.html">Dashboard</a></li>
+            <li><a href="jobs.html">Jobs</a></li>
+            <li><a href="profile.html">Profile</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a id="logout-button" style="cursor: pointer;">Logout</a></li>
+
+        </ul>
+    </nav>
+    <div id="welcome-widget" class="welcome-widget" style="display: none;">
+        <div class="welcome-header">
+            <h1>Welcome Back, <span id="user-name">Abdullah Amir</span>!</h1>
+            <p id="user-email">abdullah.online@gmail.com</p>
+        </div>
+        <div class="welcome-body">
+            <p>We're glad to have you here. Explore your dashboard and make the most of your journey with AutoApplyPro!</p>
+        </div>
+    </div>
+    
+    <section class="dashboard">
+        <div class="dashboard-card">
+            <i class="fas fa-chart-line"></i>
+            <a href="profile.html" style="color:inherit; text-decoration:none;"><b>Profile</b></a>
+            <p>Your profile, Your story.</p>
+        </div>
+        <div class="dashboard-card">
+            <i class="fas fa-tasks"></i>
+            <a href="create-cv.html" style="color:inherit; text-decoration:none;"><b>Create Cv</b></a>
+            <p>Create & UploadCV</p>
+        </div>
+        <div class="dashboard-card">
+            <i class="fas fa-tasks"></i>
+            <a href="view-cv.html" style="color:inherit; text-decoration:none;"><b>View Cv</b></a>
+            <p>View Cv</p>
+        </div>
+       
+        <div class="dashboard-card">
+            <i class="fas fa-briefcase"></i>
+            <a href="jobs.html" style="color:inherit; text-decoration:none;"><b>Available Jobs</b></a>
+            <p>Explore the endless Oppourtunities!</p>
+        </div>
+
+        <div class="dashboard-card">
+            <i class="fas fa-briefcase"></i>
+            <a href="appliedJobs.html" style="color:inherit; text-decoration:none;"><b>Applied Jobs</b></a>
+            <p>View Your Job Applications</p>
+        </div>
+
+        <div class="dashboard-card">
+            <i class="fas fa-briefcase"></i>
+            <a href="employerSignup.html" style="color:inherit; text-decoration:none;"><b>Create Oppourtunities</b></a>
+            <p>Be An Employer!</p>
+        </div>
+       
+        <div class="dashboard-card">
+            <i class="fas fa-cog"></i>
+            <a href="setting.html" style="color:inherit; text-decoration:none;"><b>Settings</b></a>
+            <p>Customize your dashboard experience.</p>
+        </div> 
+        <div class="dashboard-card">
+            <i class="fas fa-envelope"></i>
+            <a href="#" style="color:inherit; text-decoration:none;"><b>Messages</b></a>
+            <p>Communicate with recruiters seamlessly.</p>
+        </div>
+        <div class="dashboard-card">
+            <i class="fas fa-user"></i>
+            <a href="contact.html" style="color:inherit; text-decoration:none;"><b>Contact</b></a>
+            <p>If you have any Queries.</p>
+        </div>
+
+    </section>
+    
+   
+
+    <div id="advertise-alert" class="hidden" >
+        <div class="advertise-box">
+            <div class="advertise-header">
+                <h2>Get Hired Faster with AutoApplyPro!</h2>
+                <button id="close-advertise" class="close-btn">&times;</button>
+            </div>
+            <div class="advertise-body">
+                <p>Enable auto-apply functionality to save time and automatically apply for jobs that match your skills and preferences!</p>
+                <p>Try it now and boost your chances of landing your dream job.</p>
+                <p style="color: red;">Befor enable AAP, make sure you have successfully completed your profile & cv!.</p>
+
+                <button id="enable-auto-apply" class="action-btn">Enable Auto-Apply</button>
+            </div>
+        </div>
+    </div>
+
+    
+     
+    
+    <footer class="footer">
+        <p>&copy; 2025 Autoapplypro. All Rights Reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/jwt-decode/build/jwt-decode.min.js"></script>
+    <script src="dashboard.js"></script>
+    <script src="cvUploadedChecker.js"></script>
+    <script src="logOut.js"></script>
+    
+       
+
+</body>
+</html>
+

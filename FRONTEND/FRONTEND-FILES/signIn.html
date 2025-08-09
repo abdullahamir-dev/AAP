@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoApplyPro - Sign In</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <style>
+        /* Reset & General Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #2563eb; /* Blue background */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            color: white;
+        }
+
+        /* Main Container */
+        .container {
+            background-color: #ffffff; /* White background for the form */
+            width: 100%;
+            max-width: 400px;
+            border-radius: 12px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            padding: 2rem;
+            color: #374151; /* Dark text color for form */
+        }
+
+        .container h1 {
+            text-align: center;
+            font-size: 2rem;
+            color: #1f2937; /* Dark text color */
+            margin-bottom: 1.5rem;
+        }
+
+        /* Button Styles */
+        .social-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0.5rem 0;
+            padding: 0.75rem;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            border: none;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .social-button i {
+            margin-right: 0.5rem;
+            font-size: 1.2rem;
+        }
+
+        .social-button.google,
+        .social-button.microsoft,
+        .social-button.apple {
+            background-color: #2563eb; /* Blue color */
+            color: #ffffff;
+        }
+
+        .social-button.google:hover,
+        .social-button.microsoft:hover,
+        .social-button.apple:hover {
+            background-color: #1d4ed8; /* Slightly darker blue */
+            transform: scale(1.02);
+            box-shadow: 0 6px 12px rgba(37, 99, 235, 0.4);
+        }
+
+        /* Divider */
+        .divider {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 1.5rem 0;
+        }
+
+        .divider::before,
+        .divider::after {
+            content: "";
+            flex: 1;
+            height: 1px;
+            background-color: #d1d5db;
+        }
+
+        .divider span {
+            margin: 0 0.5rem;
+            color: #9ca3af;
+            font-size: 0.9rem;
+        }
+
+        /* Form Styles */
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        input {
+            padding: 0.75rem;
+            margin: 0.5rem 0;
+            border: 1px solid #d1d5db;
+            border-radius: 8px;
+            font-size: 1rem;
+            color: #374151;
+        }
+
+        input:focus {
+            outline: none;
+            border-color: #2563eb;
+            box-shadow: 0 0 4px rgba(37, 99, 235, 0.5);
+        }
+
+        .password-field {
+            position: relative;
+        }
+
+        .toggle-password {
+            position: absolute;
+            right: 12px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 0.9rem;
+            color: #2563eb;
+            cursor: pointer;
+        }
+
+        .forgot-password {
+            text-align: right;
+            margin-top: 0.5rem; /* Space between Sign In and Forgot Password */
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+            color: #2563eb;
+            text-decoration: none;
+        }
+
+        .forgot-password:hover {
+            text-decoration: underline;
+        }
+
+        /* Submit Button */
+        .submit-button {
+            background-color: #2563eb; /* Blue color */
+            color: #ffffff;
+            padding: 0.75rem;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .submit-button:hover {
+            background-color: #1d4ed8; /* Slightly darker blue */
+            transform: scale(1.02);
+            box-shadow: 0 6px 12px rgba(37, 99, 235, 0.4);
+        }
+
+        /* Checkbox */
+        .checkbox-container {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+        }
+
+        .checkbox-container input {
+            margin-right: 0.5rem;
+        }
+
+        /* Responsive Design */
+        @media (min-width: 768px) {
+            .container {
+                padding: 3rem;
+            }
+
+            .container h1 {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Sign In</h1>
+        <form>
+            <input type="text" placeholder="Email or phone" required>
+            <div class="password-field">
+                <input type="password" id="password" placeholder="Password" required>
+                <span id="toggle-password" class="toggle-password">Show</span>
+            </div>
+            <button type="submit" class="submit-button">Sign In</button> <!-- Blue Sign In button -->
+            <a href="#" class="forgot-password">Forgot password?</a>
+            <div class="checkbox-container">
+                <input type="checkbox" id="keep-logged-in">
+                <label for="keep-logged-in">Keep me logged in</label>
+            </div>
+        </form>
+        <!-- Moved the social buttons to the bottom -->
+        <div class="divider"><span>or</span></div>
+        <button class="social-button google"><i class="fab fa-google"></i> Continue with Google</button>
+        <button class="social-button microsoft"><i class="fab fa-microsoft"></i> Sign in with Microsoft</button>
+        <button class="social-button apple"><i class="fab fa-apple"></i> Sign in with Apple</button>
+    </div>
+    <script>
+        // Toggle password visibility
+        document.getElementById('toggle-password').addEventListener('click', function () {
+            const passwordField = document.getElementById('password');
+            const isPasswordVisible = passwordField.type === 'password';
+            passwordField.type = isPasswordVisible ? 'text' : 'password';
+            this.textContent = isPasswordVisible ? 'Hide' : 'Show';
+        });
+    </script>
+</body>
+</html>

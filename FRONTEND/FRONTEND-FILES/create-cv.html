@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create or Upload CV</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="create-cv.css">
+    <link rel="stylesheet" href="newNav.css">
+</head>
+<body class="bg-gray-100 font-sans">
+    <header class="bg-blue-600 text-white shadow-sm">
+    
+                
+        <nav class="navbar">
+            <div class="logo">
+                <img src="https://cdn-icons-png.flaticon.com/512/2920/2920327.png" alt="AI Logo">
+                <span>Autoapplypro</span>
+            </div>
+            <ul class="menu">
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="jobs.html">Jobs</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a id="logout-button" style="cursor: pointer;">LogOut</a></li>
+            </ul>
+            <!-- <div class="buttons-right">
+                <div class="icons">
+                    <i class="fas fa-home"></i>
+                    <i class="fas fa-user-friends"></i>
+                    <i class="fas fa-briefcase"></i>
+                    <i class="fas fa-comment-dots"></i>
+                    <div class="notification">
+                        <i class="fas fa-bell"></i>
+                    </div>
+                </div>
+            </div> -->
+        </nav>
+                
+         
+    </header>
+    <main class="container mx-auto mt-6 px-6">
+        <div class="bg-white p-6 rounded-md shadow-sm">
+            <h2 class="text-xl font-semibold mb-4">Create or Upload CV</h2>
+            <form id="cv-form" class="space-y-4">
+                <!-- Pre-filled fields from profile -->
+                <div>
+                    <label class="block text-gray-700">Full Name</label>
+                    <input type="text" id="full_name" class="w-full p-2 border rounded-md" placeholder="Enter your full name" required>
+                </div>
+                <div>
+                    <label class="block text-gray-700">Email</label>
+                    <input type="email" id="email" class="w-full p-2 border rounded-md" placeholder="Enter your email" required>
+                </div>
+                <div>
+                    <label class="block text-gray-700">Phone Number</label>
+                    <input type="text" id="phone" class="w-full p-2 border rounded-md" placeholder="Enter your phone number" required>
+                </div>
+                <div>
+                    <label class="block text-gray-700" >Country</label>
+                    <input type="text" id="country" class="w-full p-2 border rounded-md" placeholder="Enter your Country" required>
+                </div>
+                <div>
+                    <label class="block text-gray-700">City</label>
+                    <input type="text" id="city" class="w-full p-2 border rounded-md" placeholder="Enter your City" required>
+                </div>
+                <div>
+                    <label class="block text-gray-700">Town/Area</label>
+                    <input type="text" id="townOrArea" class="w-full p-2 border rounded-md" placeholder="Enter your Town/Area" required>
+                </div>
+                <!-- Additional specialized fields -->
+                <div>
+                    <label class="block text-gray-700">Skills</label>
+                    <textarea id="skills" class="w-full p-2 border rounded-md" rows="2" placeholder="Enter your skills (comma-separated)" required></textarea>
+                </div>
+                <div>
+                    <label class="block text-gray-700">Experience</label>
+                    <textarea id="experience" class="w-full p-2 border rounded-md" rows="4" placeholder="Enter your work experience"></textarea>
+                </div>
+                <div>
+                    <label class="block text-gray-700">Education</label>
+                    <textarea id="education" class="w-full p-2 border rounded-md" rows="3" placeholder="Enter your education details"></textarea>
+                </div>
+                <div>
+                    <label class="block text-gray-700">Field of Study</label>
+                    <input type="text" id="field_of_study" class="w-full p-2 border rounded-md" placeholder="Enter your field of study">
+                </div>
+                <!-- File upload -->
+                <div>
+                    <label class="block text-gray-700">Upload CV</label>
+                    <input type="file" id="cv_file" class="w-full p-2 border rounded-md" accept=".pdf,.doc,.docx" required  >
+                    
+                    
+                </div>
+                <button type="submit" class="w-full py-2 text-white rounded-md" id="submit-btn">Submit</button>
+
+            </form>
+
+            <div id="cv-download-btn" style="display: none;">
+                <strong style="color: red;">Download Previously Submitted Cv:</strong>
+                <br>
+                
+                <button id="download-btn" class="py-2 px-4 bg-blue-600 text-white rounded-md">
+                    <i class="fas fa-download"></i> Download CV
+                </button>
+                </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <p>&copy; 2025 Autoapplypro. All Rights Reserved.</p>
+    </footer>
+
+   
+    <script src="create-cv.js"></script>
+    <script src="cvUploadedChecker.js"></script>
+    <script src="logOut.js"></script>
+
+</body>
+</html>

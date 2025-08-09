@@ -1,0 +1,131 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #102a42; /* Blue color */
+    padding: 15px 30px;
+    border-bottom: 1px solid #d3d3d3;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.navbar:hover {
+    background-color: #102a42;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.navbar .logo {
+    display: flex;
+    align-items: center;
+    font-size: 26px;
+    font-weight: bold;
+    color: #ffffff; /* White text for contrast */
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.navbar .logo:hover {
+    transform: scale(1.1);
+}
+
+.navbar .logo img {
+    width: auto;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.navbar .menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin-left: auto;
+    gap: 30px;
+}
+
+.navbar .menu li a {
+    text-decoration: none;
+    color: #ffffff; /* White text for menu items */
+    font-size: 18px;
+    font-weight: 500;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+}
+
+.navbar .menu li a:hover {
+    background-color: #003c7d;
+    color: #ffffff;
+    transform: translateY(-3px);
+}
+
+.navbar .menu li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 0;
+    background-color: white;
+    transition: width 0.3s ease-in-out;
+}
+
+.navbar .menu li a:hover::after {
+    width: 100%;
+}
+
+.buttons-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.navbar .icons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.navbar .icons i {
+    font-size: 22px;
+    color: #ffffff; /* White icons */
+    cursor: pointer;
+    transition: color 0.3s ease-in-out, transform 0.3s;
+}
+
+.navbar .icons i:hover {
+    color: #ffeb3b; /* Bright yellow */
+    transform: scale(1.2);
+}
+
+.navbar .cta-btn {
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    transition: background-color 0.3s ease-in-out, transform 0.3s;
+}
+
+.navbar .cta-btn:hover {
+    background-color: #003c7d;
+    transform: scale(1.1);
+}
+
+.footer {
+    background-color: #273F54;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    position: fixed; /* Make the footer fixed */
+    bottom: 0; /* Position it at the bottom */
+    width: 100%; /* Full width */
+}
+
+/* Optional: Add this if you want the content to end at the footer */
+.content-container {
+    min-height: calc(100vh - 60px); /* Adjust for footer height */
+}
