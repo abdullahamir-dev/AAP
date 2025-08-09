@@ -13,9 +13,12 @@ Currently in **active development**, the system focuses on the MVP stage, implem
 - **Auto-Apply Job Applications** – Automatically applies to matching job postings once a threshold match score is reached.
 - **Weighted Job Matching Algorithm** – Compares candidate skills, education, and location with job requirements.
 - **Form-Based Resume Input** – Users fill out structured resume fields and can upload an external CV file (PDF or other generic file types).
+- **Opt-In Auto-Apply Preference** – Auto-Apply is **not enabled by default**. The system promotes the feature to new seekers, but it is entirely up to the user to subscribe/enable it in their preferences.
+- **Profile & CV Completion Check** – If a user subscribes to Auto-Apply without having a completed profile or uploaded CV, the system redirects them to complete their profile and CV before enabling the feature.
 - **Client-Server Architecture** – Decoupled frontend and backend communicating via REST APIs.
 - **MySQL Database Integration** – Stores user data, job postings, and application history securely.
 - **Duplicate Prevention** – Ensures the system does not re-apply for the same job for the same user.
+
 
 ### **For Employers**
 - **Registration & Login** – Employers can create accounts to manage their job postings.
