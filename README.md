@@ -9,6 +9,7 @@ Currently in **active development**, the system focuses on the MVP stage, implem
 
 ## 🚀 Features (MVP)
 
+### **For Job Seekers**
 - **Auto-Apply Job Applications** – Automatically applies to matching job postings once a threshold match score is reached.
 - **Weighted Job Matching Algorithm** – Compares candidate skills, education, and location with job requirements.
 - **Form-Based Resume Input** – Users fill out structured resume fields and can upload an external CV file (PDF or other generic file types).
@@ -16,36 +17,14 @@ Currently in **active development**, the system focuses on the MVP stage, implem
 - **MySQL Database Integration** – Stores user data, job postings, and application history securely.
 - **Duplicate Prevention** – Ensures the system does not re-apply for the same job for the same user.
 
----
-
-## 🧠 High-Level Algorithm Overview
-
-The **Auto-Apply Algorithm** is the heart of AutoApplyPro.  
-It works as follows:
-
-1. **User Data Collection**  
-   - Users enter resume details via form fields (skills, education, experience, location, etc.)  
-   - Users can also upload a CV file in PDF or other formats.  
-   - Currently, no customizable resume templates are offered — this is planned for later phases.
-
-2. **Job Data Fetching**  
-   - The system fetches all active job postings from the database, each containing required skills, education, and location details.
-
-3. **Matching Process**  
-   - **Skills Matching:** Compares user skills with job-required skills, using a minimum match count to qualify.
-   - **Education Matching:** Compares user education level/keywords to job-required education.
-   - **Location Matching:** Assigns weighted scores depending on match level (country, city, town). Remote jobs get a full score automatically.
-
-4. **Weighted Scoring**  
-   - Each category (skills, education, location) contributes a weight to the total score.
-   - Example: Skills (1 point if matched), Education (1 point if matched), Location (0–1 point depending on proximity).
-   - If the **total score meets or exceeds a defined threshold**, the system proceeds to auto-apply.
-
-5. **Application Submission**  
-   - Applications are created in the database with metadata (job ID, user ID, CV file path, applied method, timestamp).
-   - Duplicate checks ensure the same job is not applied to more than once for the same user.
+### **For Employers**
+- **Registration & Login** – Employers can create accounts to manage their job postings.
+- **Job Posting** – Employers can create new job listings with skill, education, and location requirements.
+- **Job Management Dashboard** – View, update, and delete previously created jobs.
+- **Applicant Viewing** – View all applicants for each job in a **nested card-based UI**, making it easy to review candidate details.
 
 ---
+
 
 ## 🛠 Tech Stack
 
