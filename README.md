@@ -78,21 +78,21 @@ DB_NAME=your_database_name
 ```bash
 cd BACKEND/AAP-backend
 npm install
-npm start```
+npm start
+```
 
 
-
-Frontend:
+#### Frontend:
 Navigate to the FRONTEND folder.
 Open index.html directly in your browser or use a local server.
 Note: Ensure both the frontend and backend are running for the application to function correctly.
 
 
 
-📌 Status
+#### 📌 Status
 Current Focus: Backend intelligence and core auto-apply functionality.
 
-Pending Improvements:
+##### Pending Improvements:
 Customizable resume templates in the Resume Builder.
 Advanced parsing of uploaded CV files for richer matching.
 Additional job data sources.
@@ -100,6 +100,6 @@ UI enhancements for a smoother user experience.
 
 
 
-📝 License
+#### 📝 License
 This project is intended for educational and demonstration purposes.
 Future iterations may evolve into a deployable SaaS platform.
